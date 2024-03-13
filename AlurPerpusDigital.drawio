@@ -1,0 +1,16 @@
+<mxfile host="app.diagrams.net" modified="2024-01-22T09:02:34.824Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5ClzE8OrlcHC5GMPHnHD" version="22.1.21" type="github">
+  <diagram name="Page-1" id="GB4sVPhxCkcdXOhrHuez">
+    <mxGraphModel dx="874" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ePDeduRZNzr2pNgPZws5-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="264" y="60" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ePDeduRZNzr2pNgPZws5-2" value="FlowChart&lt;br&gt;Perpus Digital" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="361" y="70" width="106" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

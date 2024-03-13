@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2024-01-24T01:54:38.852Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="9w3CFM9k5CBPqbgLeP6k" version="23.0.0" type="github">
+  <diagram name="Page-1" id="h-1sJgJYTkMIB4mm2Smt">
+    <mxGraphModel dx="880" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6fEy78B3JPw9xRA56OFU-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-1" target="6fEy78B3JPw9xRA56OFU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-1" value="Pengunjung" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-2" value="Berkunjung ke Perpustakaan" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-3" target="6fEy78B3JPw9xRA56OFU-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-3" value="Mengisi Form Pengunjung" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-4" target="6fEy78B3JPw9xRA56OFU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-4" value="Melihat Daftar Kunjungan" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-8" target="6fEy78B3JPw9xRA56OFU-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-8" target="6fEy78B3JPw9xRA56OFU-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-8" value="Mencari Buku" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-2" target="6fEy78B3JPw9xRA56OFU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="220" as="sourcePoint" />
+            <mxPoint x="600" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-17" target="6fEy78B3JPw9xRA56OFU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-17" value="Kirim" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-8" target="6fEy78B3JPw9xRA56OFU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="220" as="sourcePoint" />
+            <mxPoint x="680" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-4" target="6fEy78B3JPw9xRA56OFU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="320" as="sourcePoint" />
+            <mxPoint x="680" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-17" target="6fEy78B3JPw9xRA56OFU-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-23" target="6fEy78B3JPw9xRA56OFU-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-23" value="Masukkan Judul Buku" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="310" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6fEy78B3JPw9xRA56OFU-25" target="6fEy78B3JPw9xRA56OFU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-25" value="Menampilkan Hasil Pencarian Buku" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6fEy78B3JPw9xRA56OFU-27" value="Rincian Buku" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
