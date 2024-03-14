@@ -1,9 +1,9 @@
 <template>
   <div class="content">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col layer">
-          <form @submit.prevent="" autocomplete="none">
+          <form @submit.prevent="addData" autocomplete="none">
             <div class="row text-center fs-1 mb-4" style="color: white; font-family: 'Jockey One'; letter-spacing: 10px;">
               <p>Isi Kunjungan</p>
             </div>
@@ -11,7 +11,7 @@
               <input type="text" class="form-control form-control-lg rounded-4" id="nama" placeholder="Nama" required>
             </div>
             <div class="row mb-3">
-              <select class="form-control form-control-lg rounded-4" id="keanggotaan" required>
+              <select class="form-control form-control-lg form-select rounded-4" id="keanggotaan" required>
                 <option value="" disabled selected>Keanggotaan</option>
                 <option value="guru" >Guru</option>
                 <option value="siswa" >Siswa</option>
@@ -21,7 +21,7 @@
             </div>
             <div class="row">
               <div class="col p-0 mb-3">
-                <select class="form-control form-control-lg rounded-4" id="tingkat" required>
+                <select class="form-control form-control-lg form-select rounded-4" id="tingkat" required>
                   <option value="" disabled selected >Tingkat</option>
                   <option value="10">10</option>
                   <option value="11">11</option>
@@ -29,7 +29,7 @@
                 </select>
               </div>
               <div class="col mb-3">
-                <select class="form-control form-control-lg rounded-4" id="jurusan" required>
+                <select class="form-control form-control-lg form-select rounded-4" id="jurusan" required>
                   <option value="" disabled selected>Jurusan</option>
                   <option value="pplg" >PPLG</option>
                   <option value="tbsm" >TBSM</option>
@@ -39,7 +39,7 @@
                 </select>
               </div>
               <div class="col p-0 mb-3">
-                <select class="form-control form-control-lg rounded-4" id="kelas" required>
+                <select class="form-control form-control-lg form-select rounded-4" id="kelas" required>
                   <option value="" disabled selected>Kelas</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class="row mb-3">
-              <select class="form-control form-control-lg rounded-4" id="keperluan" required>
+              <select class="form-control form-control-lg form-select rounded-4" id="keperluan" required>
                 <option value="" disabled selected>Keperluan</option>
                 <option value="berkunjung">Berkunjung</option>
                 <option value="membaca">Membaca Buku</option>
@@ -58,7 +58,8 @@
               </select>
             </div>
             <div class="row float-end my-4">
-              <input class="form-control rounded-4" style="width: 5rem;" id="btn" type="button" value="Submit">
+              <NuxtLink id="btn" class="form-control rounded-4 text-decoration-none" to="/riwayat">Submit</NuxtLink>
+              <!-- <input class="form-control rounded-4" style="width: 5rem;" id="btn" type="button" value="Submit"> -->
             </div>
           </form>
         </div>
@@ -77,14 +78,15 @@
 .content {
   background-image: url("@/assets/img/bg-form.jpg");
   background-size: cover;
-  /* width: 100%; */
+  max-width: 100%;
+  height: 100vh;
 }
 
 .layer {
   background-image: linear-gradient(180deg, rgba(165, 160, 156, 0.5),rgba(72, 105, 133, 0.8),rgba(72, 105, 133, 0.8), rgba(165, 160, 156, 0.5));
   border-radius: 50px;
-  margin: 15% 50% 10% 5%;
-  padding: 3% 7.5%;
+  margin: 15% 55% 1% 5%;
+  padding: 2% 6%;
 }
 
 .form-control{
@@ -102,5 +104,10 @@
   background-color: #0C5EA1;
   border: none;
   color: white;
+}
+@media (max-width: 280px) {
+  .layer {
+    margin-top: 50%;
+  }
 }
 </style>

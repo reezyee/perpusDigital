@@ -1,8 +1,7 @@
 
 <template>
-  <div class="container-fluid">
+  <div>
     <Header />
     <slot />
   </div>  
 </template>
->>>>>>> 238ce16873ae032353cbdb77384fc35bc1623989
