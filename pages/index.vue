@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col layer">
-          <form @submit.prevent="addData" autocomplete="none">
+          <form @submit.prevent="addData" autocomplete="off">
             <div class="row text-center fs-1 mb-4" style="color: white; font-family: 'Jockey One'; letter-spacing: 10px;">
               <p>Isi Kunjungan</p>
             </div>
@@ -53,7 +53,7 @@
                 <option value="" disabled selected>Keperluan</option>
                 <option value="berkunjung">Berkunjung</option>
                 <option value="membaca">Membaca Buku</option>
-                <option value="mengembalikan">Mengembalikam Buku</option>
+                <option value="mengembalikan">Mengembalikan Buku</option>
                 <option value="meminjam">Meminjam Buku</option>
               </select>
             </div>
@@ -73,7 +73,6 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Jockey+One&family=Jomhuria&display=swap');
 
 .content {
   background-image: url("@/assets/img/bg-form.jpg");
@@ -85,7 +84,7 @@
 .layer {
   background-image: linear-gradient(180deg, rgba(165, 160, 156, 0.5),rgba(72, 105, 133, 0.8),rgba(72, 105, 133, 0.8), rgba(165, 160, 156, 0.5));
   border-radius: 50px;
-  margin: 15% 55% 1% 5%;
+  margin: 10% 55% 0% 5%;
   padding: 2% 6%;
 }
 
@@ -94,6 +93,7 @@
   font-family: 'Jockey One';
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  font-size: 15px;
 }
 
 /* #nama , #keanggotaan, #keperluan{
@@ -105,9 +105,19 @@
   border: none;
   color: white;
 }
-@media (max-width: 280px) {
+@media (max-width: 900px) {
   .layer {
-    margin-top: 50%;
+    margin: 30% 10% 1% 10%;
+  }
+}
+@media (max-width: 600px) {
+  .layer {
+    margin: 40% 5% 1% 5%;
+  }
+}
+@media (max-width: 460px) {
+  .layer {
+    margin: 55% 5% 1% 5%;
   }
 }
 </style>

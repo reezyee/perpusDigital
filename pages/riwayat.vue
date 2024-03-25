@@ -1,28 +1,28 @@
 <template>
-    <div class="content">
+    <div class="content p-5">
         <div class="container-fluid">
-            <div class="row pt-5">
-                <div class="col fe">
+            <div class="row lk" style="padding-top: 150px;">
+                <div class="col">
                     <NuxtLink class="btn btn-lg rounded-5" to="/">
                         Isi Kunjungan
                     </NuxtLink>
                 </div>
-                <div class="col fe text-center" style="color: white;">
+                <div class="col text-center" style="color: white;">
                     <h1>
                         Riwayat <br> Kunjungan
                     </h1>
                 </div>
-                <div class="col fe">
-                    <NuxtLink class="btn btn-lg rounded-5">
+                <div class="col">
+                    <NuxtLink class="btn btn-lg rounded-5" to="/buku/">
                         Cari Buku
                     </NuxtLink>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="color: white;">
                 <p>Menampilkan 5 dari 10</p>
-                <div class="table table-responsive">
-                    <table class="table table-hover">
-                        <thead>
+                <div class="table table-responsive p-0">
+                    <table class="table table-hover text-center">
+                        <thead class="table-head">
                             <tr>
                                 <th>No</th>
                                 <th>Tanggal</th>
@@ -33,33 +33,51 @@
                                 <th>Keperluan</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table-body">
                             <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
                             </tr>
                         </tbody>
                     </table>
@@ -74,21 +92,64 @@
 </script>
 
 <style scoped>
+
 .content {
     background-image: url('@/assets/img/BackgroundDaftarKunjungan.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
+    font-family: "Jockey One";
 }
-
 .btn {
     background-color: #fffeee;
-    padding: 0 30px;
-    margin: 0 100px 0;
-
-}
-.fe {
-    margin: 150px 0 0 0;
+    margin-left: 100px;
 }
 
+.lk{
+    display: flex;
+    align-items: center;
+}
+
+.table{
+    --bs-table-bg : none;
+    --bs-table-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    letter-spacing: 2px;
+}
+.table-head{
+    background-color: #305075;
+}
+.table-body{
+    background-color: #7395BA;
+    border: 1px solid ;
+}
+td {
+    padding: 15px 0px;
+    border: 1px solid ;
+}
+
+@media (max-width: 675px) {
+    .lk {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn {
+    margin-left: 200px;
+}
+}
+
+@media (max-width: 500px) {
+    .lk {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn {
+    margin-left: 80px;
+}
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="row navbar navbar-expand-lg bg-transparant m-0 position-fixed">
-    <div class="col-2" style="padding-left: 8%;">
-      <img src="@/assets/img/LOGO-SMK4.png" alt="logo smkn4">
+    <div class="col-md-2 col-3" style="padding-left: 8%;">
+      <img class="img-fluid" src="@/assets/img/LOGO-SMK4.png" alt="logo smkn4">
     </div>
-    <div class="col" style="color: white;">
-      <p class="judul ms-4">Perpus Digital</p>
+    <div class="col-md-10 col-9" style="color: white;">
+      <h1 class="judul ms-4">Perpus Digital</h1>
       <p class="alamat ms-4">SMK Negeri 4 Tasikmalaya</p>
     </div>
   </div>
@@ -15,8 +15,6 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Jockey+One&family=Jomhuria&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
 .bg-transparant{
   background-color: #45618860; 
@@ -27,7 +25,7 @@
 .judul {
   letter-spacing: 10px;
   font-family: "Jockey One";
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .alamat {
@@ -36,27 +34,31 @@
 }
 
 img {
-  width: 115px;
+  width: 100px;
 }
-
+/* 
 @media (max-width: 912px){
   img {
     width: 90px;
+  }
+  .judul {
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-family: "Jockey One";
+    padding-left: 20px;
+  }
+  .alamat {
+    font-family: "Jaldi";  
+    padding-left: 20px; 
   }
 }
 @media (max-width: 600px){
   img {
     width: 70px;
   }
-  .judul {
-  letter-spacing: 10px;
-  font-size: 30px;
-  font-family: "Jockey One";
-  padding-left: 20px;
-  }
   .alamat {
-  font-family: "Jaldi";  
-  padding-left: 20px; 
+    font-family: "Jaldi";  
+    padding-left: 20px; 
   }
-}
+} */
 </style>
