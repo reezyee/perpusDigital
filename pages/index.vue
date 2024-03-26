@@ -52,7 +52,10 @@
               </select>
             </div>
             <div class="row float-end my-4">
-              <input class="form-control form-control-lg rounded-5" id="btn" type="submit" value="Submit">
+              <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none" id="btn" to="/riwayat">
+                Submit
+              </NuxtLink>
+              <!-- <input class="form-control form-control-lg rounded-5" id="btn" type="submit" value="Submit"> -->
               <!-- <input class="form-control rounded-4" style="width: 5rem;" id="btn" type="button" value="Submit"> -->
             </div>
           </form>
