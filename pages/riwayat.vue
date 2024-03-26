@@ -35,43 +35,7 @@
                         </thead>
                         <tbody class="table-body">
                             <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
+                                <td></td>
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
@@ -88,7 +52,14 @@
 </template>
 
 <script setup>
+const supabase = useSupabaseClient()
 
+const visitor = ref([])
+
+async function getPengunjung() {
+    const {data, error} = await supabase.from('pengunjung')
+    .select("*")
+}
 </script>
 
 <style scoped>

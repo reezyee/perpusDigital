@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <div class="container-fluid">
-            <div class="row" style="padding-top: 180px;">
+            <div class="row" style="padding-top: 190px;">
                 <div class="col-md-4 col-5" style="padding-left: 15%;">
                     <NuxtLink class="btn btn-lg rounded-5" to="/">
                         Isi Kunjungan
@@ -25,11 +25,13 @@
                 </div>
                 <div class="col-2 ps-0">
                     <select name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select">
-                        <option value="" disabled selected>...</option>
+                        <option value="" disabled selected>  </option>
+                        <option value="">Bahasa</option>
+                        <option value="">Kesusastraan</option>
                         <option value="">Novel</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
-                        <option value="">...</option>
+                        <option value="">Pendidikan</option>
+                        <option value="">Komik</option>
+                        <option value="">Sejarah</option>
                     </select>
                 </div>
             </div>
@@ -66,10 +68,14 @@
     height: 100vh;
     font-family: 'Jockey One';
 }
-.btn {
+.btn  {
     background-color: #fffeee;
     /* padding: 0 30px;
     margin: 0 100px 0; */
+}
+
+.form-control{
+    background-color: #fffeee;
 }
 
 img {
