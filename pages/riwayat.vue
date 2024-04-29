@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="row" style="color: white;">
-                <p>Menampilkan 5 dari 10</p>
+                <p>Menampilkan {{  visitors.length }}</p>
                 <div class="table table-responsive p-0">
                     <table class="table table-hover text-center">
                         <thead class="table-head">
@@ -34,14 +34,14 @@
                             </tr>
                         </thead>
                         <tbody class="table-body">
-                            <tr>
-                                <td></td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
+                            <tr v-for="(visitor, i) in visitors" :key="i">
+                                <td>{{ i+1 }}.</td>
+                                <td>{{ visitor.tanggal }}</td>
+                                <td>{{ visitor.waktu.split('.')[0] }}</td>
+                                <td>{{  visitor.nama }}</td>
+                                <td>{{ visitor.keanggotaan.nama }}</td>
+                                <td>{{ visitor.kelas }}</td>
+                                <td>{{ visitor.keperluan.nama }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -54,12 +54,17 @@
 <script setup>
 const supabase = useSupabaseClient()
 
-const visitor = ref([])
+const visitors = ref([])
 
 async function getPengunjung() {
     const {data, error} = await supabase.from('pengunjung')
-    .select("*")
+    .select(`*, keanggotaan(*), keperluan(*)`)
+    if (data) visitors.value = data
 }
+
+onMounted(() => {
+    getPengunjung()
+})
 </script>
 
 <style scoped>
@@ -96,7 +101,7 @@ async function getPengunjung() {
     border: 1px solid ;
 }
 td {
-    padding: 15px 0px;
+    padding: 5px 0px;
     border: 1px solid ;
 }
 

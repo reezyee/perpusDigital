@@ -16,7 +16,7 @@
                 <option v-for="(keanggotaan, i) in members" :key="i" :value="keanggotaan.id">{{ keanggotaan.nama }}</option>
               </select>
             </div>
-            <div class="row">
+            <div  class="row">
               <div class="col p-0 mb-3">
                 <select v-model="tingkat" class="form-control form-control-lg form-select rounded-4" id="tingkat" required>
                   <option value="" disabled selected >Tingkat</option>
@@ -28,11 +28,11 @@
               <div class="col mb-3">
                 <select v-model="jurusan" class="form-control form-control-lg form-select rounded-4" id="jurusan" required>
                   <option value="" disabled selected>Jurusan</option>
-                  <option value="pplg" >PPLG</option>
-                  <option value="tbsm" >TBSM</option>
-                  <option value="tjkt" >TJKT</option>
-                  <option value="toi" >TOI</option>
-                  <option value="dkv" >DKV</option>
+                  <option value="PPLG">PPLG</option>
+                  <option value="TBSM">TBSM</option>
+                  <option value="TJKT">TJKT</option>
+                  <option value="TOI">TOI</option>
+                  <option value="DKV">DKV</option>
                 </select>
               </div>
               <div class="col p-0 mb-3">
@@ -52,10 +52,10 @@
               </select>
             </div>
             <div class="row float-end my-4">
-              <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none" id="btn" to="/riwayat">
+              <!-- <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none" id="btn" to="/riwayat">
                 Submit
-              </NuxtLink>
-              <!-- <input class="form-control form-control-lg rounded-5" id="btn" type="submit" value="Submit"> -->
+              </NuxtLink> -->
+              <input class="form-control form-control-lg rounded-5" id="btn" type="submit" value="Submit">
               <!-- <input class="form-control rounded-4" style="width: 5rem;" id="btn" type="button" value="Submit"> -->
             </div>
           </form>
@@ -80,7 +80,7 @@ const kelasLengkap = ref('')
 
 async function tambahData(){
   kelasLengkap.value = `${tingkat.value} ${jurusan.value} ${kelas.value}`
-  const { error } = await supabase.from('pengujung')
+  const { error } = await supabase.from('pengunjung')
   .insert([{
     keanggotaan: keanggotaan.value,
     kelas: kelasLengkap.value,
