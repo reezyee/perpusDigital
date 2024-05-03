@@ -1,5 +1,5 @@
 <template>
-  <div class="row navbar navbar-expand-lg bg-transparant m-0 position-fixed">
+  <div class="row navbar navbar-expand-lg bg-transparant m-0 position-fixed z-1">
     <div class="col-md-2 col-3" style="padding-left: 8%;">
       <img class="img-fluid" src="@/assets/img/LOGO-SMK4.png" alt="logo smkn4">
     </div>

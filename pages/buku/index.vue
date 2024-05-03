@@ -11,31 +11,28 @@
                     <h1 class="m-0">Pencarian Buku</h1>
                 </div>
             </div>
-            <!-- <div class="d-flex justify-content-center"> -->
                 <form @submit.prevent="getBooks" class="row pt-5 d-flex justify-content-center">
                     <div class="col-lg-10">
                         <input v-model="keyword" type="text" class="form-control form-control-md rounded-5" name="cari-buku" id="cari-buku" placeholder="Cari Judul Buku🔍" autocomplete="off">
                     </div>
-                    <!-- <div class="row ps-0 float-end"> -->
-                    <p class="col-6 m-0 pt-2 text-white mt-2">Menampilkan {{ books.length }} buku</p>
-                    <div class="col-4 my-3 d-flex flex-direction-col ps-0">
-                        <p class="col-3 text-white m-0">kategori :</p>
+                </form>
+                <div class="row my-3 d-flex justify-content-center ps-0">
+                    <p class="col-5 m-0 pt-2 text-white" style="letter-spacing: 3px;">Menampilkan {{ books.length }} buku</p>
+                    <p class="col-2 text-white m-0 text-end mt-2" style="letter-spacing: 3px;">kategori :</p>
+                    <div class="col-3">
                         <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select">
                             <option value="" disabled selected>Kategori?</option>
-                            <option v-for="(kategories, i) in kategories" :key="i" :value="kategories.id">{{ kategories.nama }}</option>
+                            <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.id">{{ kategori.nama }}</option>
                         </select>
                     </div>
-                    <!-- </div> -->
-                </form>
-            <!-- </div> -->
-            <!-- <div class="row d-flex justify-content-center pt-2">
-                
-            </div> -->
+                </div>
             <div class="row">
                 <div v-for="(book, i) in validationBook" :key="i" class="col">
-                    <div class="card">
+                    <div class="col-lg-2 col-1 card cb">
                         <div class="card-body">
-                            <img :src="book.coverUrl.publicUrl" class="cover" alt="cover">
+                            <NuxtLink :to="`/buku/${book.id}`" style="text-decoration:none">
+                                <img :src="book.coverUrl.publicUrl" class="cover border" alt="cover">
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -48,16 +45,16 @@
 const supabase = useSupabaseClient()
 
 const books = ref([])
+const kategories = ref([])
 const keyword = ref('')
-const kategories = ref('')
 
 async function getBooks() {
     const {data, error} = await supabase.from('buku')
-    .select(`*, kategori_buku ( * )`)
+    .select(`*, kategori(*)`)
     .ilike('judul', `%${keyword.value}%`)
     if (error) throw error
     if (data) {
-        books.value = data
+        books.value = data; 
         data.forEach(book => {
             const { data } = supabase.storage.from('cover').getPublicUrl(book.cover)
             if (data) {
@@ -78,7 +75,7 @@ const validationBook = computed (() => {
         return (
             b.judul?.toLowerCase().includes(keyword.value?.toLowerCase()) ||
             b.kategori?.nama.toLowerCase().includes(keyword.value?.toLowerCase())
-    )
+        )
     })
 }) 
 
@@ -110,5 +107,10 @@ onMounted(() => {
 
 img {
     width: 150px;
+}
+
+.cb {
+    background-color: #fffeee00;
+    border: 0;
 }
 </style>

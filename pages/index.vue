@@ -11,7 +11,7 @@
               <input v-model.trim="nama" type="text" class="form-control form-control-lg rounded-4" id="nama" placeholder="Nama" required>
             </div>
             <div class="row mb-3">
-              <select v-model="keanggotaan" class="form-control form-control-lg form-select rounded-4" id="keanggotaan" required>
+              <select v-model="keanggotaan" @change="resetKelas" class="form-control form-control-lg form-select rounded-4" id="keanggotaan" required>
                 <option value="" disabled selected>Keanggotaan</option>
                 <option v-for="(keanggotaan, i) in members" :key="i" :value="keanggotaan.id">{{ keanggotaan.nama }}</option>
               </select>
@@ -36,12 +36,12 @@
                 </select>
               </div>
               <div class="col p-0 mb-3">
-                <select v-model="kelas" class="form-control form-control-lg form-select rounded-4" id="kelas" required>
+                <select v-model="kelas" :disabled="!jurusan || jurusan=='TOI'" class="form-control form-control-lg form-select rounded-4" id="kelas" required>
                   <option value="" disabled selected>Kelas</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+                  <option v-if="!(jurusan=='DKV')" value="3">3</option>
+                  <option v-if="!(jurusan=='DKV')" value="4">4</option>
                 </select>
               </div>
             </div>
@@ -101,6 +101,15 @@ async function getKeperluan(){
   const{data, error} = await supabase.from('keperluan')
   .select('*')
   if(data) objectives.value = data
+}
+
+
+function resetKelas(e){
+    if(e.target.value != '2'){
+        kelas.value= ''
+        tingkat.value= ''
+        jurusan.value= ''
+    }
 }
 
 onMounted(() => {
