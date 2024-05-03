@@ -16,7 +16,7 @@
                 <option v-for="(keanggotaan, i) in members" :key="i" :value="keanggotaan.id">{{ keanggotaan.nama }}</option>
               </select>
             </div>
-            <div  class="row">
+            <div v-if="keanggotaan == '2'" class="row">
               <div class="col p-0 mb-3">
                 <select v-model="tingkat" class="form-control form-control-lg form-select rounded-4" id="tingkat" required>
                   <option value="" disabled selected >Tingkat</option>
@@ -52,15 +52,15 @@
               </select>
             </div>
             <div class="row float-end my-4">
-              <!-- <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none" id="btn" to="/riwayat">
-                Submit
-              </NuxtLink> -->
               <input class="form-control form-control-lg rounded-5" id="btn" type="submit" value="Submit">
               <!-- <input class="form-control rounded-4" style="width: 5rem;" id="btn" type="button" value="Submit"> -->
             </div>
           </form>
         </div>
       </div>
+      <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none text-center mt-2 fs-3 float-end" to="/riwayat" style="color: aliceblue;">
+        >
+      </NuxtLink>
     </div>
   </div>  
 </template>

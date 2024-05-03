@@ -2,7 +2,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row d-flex justify-content-center flex-md-wrap" style="padding-top: 190px;">
-                <div class="col-3 ">
+                <div class="col-3">
                     <img class="row img-fluid" src="@/assets/img/Harry Potter 6.png" alt="" style="width: 250px;">
                     <div class="row">
                         <NuxtLink to="/buku/" class="btn btn-lg rounded-5" style="width: 10rem;">Kembali</NuxtLink>
@@ -41,6 +41,8 @@
 }
 .btn {
     background-color: #fffeee;
-    
 }
+/* .rincicard {
+    background-color: #fffeee00;
+} */
 </style>

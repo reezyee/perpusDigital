@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="row" style="color: white;">
-                <p>Menampilkan {{  visitors.length }}</p>
+                <p>Menampilkan {{  visitors.length }} pengunjung</p>
                 <div class="table table-responsive p-0">
                     <table class="table table-hover text-center">
                         <thead class="table-head">
@@ -73,7 +73,7 @@ onMounted(() => {
     background-image: url('@/assets/img/BackgroundDaftarKunjungan.jpg');
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: "Jockey One";
 }
 .btn {
