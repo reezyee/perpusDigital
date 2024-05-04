@@ -22,12 +22,12 @@
                     <div class="col-3">
                         <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select">
                             <option value="" disabled selected>Kategori?</option>
-                            <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.id">{{ kategori.nama }}</option>
+                            <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.nama">{{ kategori.nama }}</option>
                         </select>
                     </div>
                 </div>
             <div class="row">
-                <div v-for="(book, i) in validationBook" :key="i" class="col">
+                <div v-for="(book, i) in bookFiltered" :key="i" class="col">
                     <div class="col-lg-2 col-1 card cb">
                         <div class="card-body">
                             <NuxtLink :to="`/buku/${book.id}`" style="text-decoration:none">
@@ -70,7 +70,7 @@ async function getKategori(){
     if(data) kategories.value = data
 }
 
-const validationBook = computed (() => {
+const bookFiltered = computed (() => {
     return books.value.filter((b) => {
         return (
             b.judul?.toLowerCase().includes(keyword.value?.toLowerCase()) ||
@@ -90,6 +90,12 @@ onMounted(() => {
 
 .content {
     background-image: url('@/assets/img/bg-pencarianbuku.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     width: 100%;
     /* height: 100vh; */
