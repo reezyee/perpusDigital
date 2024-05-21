@@ -59,6 +59,7 @@ const visitors = ref([])
 async function getPengunjung() {
     const {data, error} = await supabase.from('pengunjung')
     .select(`*, keanggotaan(*), keperluan(*)`)
+    .order('tanggal', { ascending: false })
     if (data) visitors.value = data
 }
 
