@@ -1,5 +1,6 @@
 <template>
-  <div class="content">
+  <div class="wrapper">
+  <div class="content"></div>
     <div class="container-fluid">
       <div class="row">
         <div class="col layer">
@@ -58,7 +59,7 @@
           </form>
         </div>
       </div>
-      <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none text-center mt-2 fs-3 float-end" to="/riwayat" style="color: aliceblue;">
+      <NuxtLink class="from-control form-control-lg rounded-5 text-decoration-none text-center mt-2 fs-3 float-end unvisible" to="/riwayat">
         >
       </NuxtLink>
     </div>
@@ -119,29 +120,43 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
+.wrapper{
+  font-family: 'Jockey One';
+}
 .content {
   background-image: url("@/assets/img/bg-form.jpg");
   background-size: cover;
-  max-width: 100%;
-  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: "Jockey One";
+  position: fixed;
+  top: 0;
+  background-position: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
+
 
 .layer {
   background-image: linear-gradient(180deg, rgba(165, 160, 156, 0.5),rgba(72, 105, 133, 0.8),rgba(72, 105, 133, 0.8), rgba(165, 160, 156, 0.5));
   border-radius: 50px;
   margin: 10% 55% 0% 5%;
   padding: 2% 6%;
+  width: 20rem;
 }
 
 .form-control{
   background-color: #FFFEEE;
   font-family: 'Jockey One';
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
+.unvisible{
+  color: #fffeee07;
+}
 /* #nama , #keanggotaan, #keperluan{
   width: 25rem;
 } */
