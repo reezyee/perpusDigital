@@ -84,7 +84,7 @@ async function getVisitors() {
     const { data, error } = await supabase.from('pengunjung')
         .select(`*, keanggotaan(*), keperluan(*)`)
         .ilike('nama', `%${keyword.value}%`)
-        .order('waktu', { ascending: false })
+        .order('tanggal', { ascending: false })
     if (data) visitors.value = data
 }
 
