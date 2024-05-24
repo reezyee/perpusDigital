@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row" style="padding: 190px 0;">
                 <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
-                    <img :src="buku?.cover" class="cover border" alt="cover" style="width: 200px;">
+                    <img :src="buku?.cover" class="cover border" alt="cover" style="width: 250px;">
                     <div class="row ">
                         <NuxtLink to="/buku/" class="btn btn-lg rounded-5 mt-3" style="width: 10rem;">Kembali</NuxtLink>
                     </div>
@@ -86,5 +86,6 @@ h4{
 h6 {
     font-family: "Jaldi";
     font-size: 20px;
+    letter-spacing: 2px;
 }
 </style>

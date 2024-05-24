@@ -17,9 +17,9 @@
                         <input v-model="keyword" type="search" class="form-control form-control-md rounded-5" name="cari-buku" id="cari-buku" placeholder="Cari Judul Buku🔍" autocomplete="off">
                     </div>
                     <div class="row my-3 d-flex justify-content-center ps-0">
-                        <p class="col-5 m-0 pt-2 text-white" style="letter-spacing: 3px;">Menampilkan {{ bookFiltered.length }} buku</p>
-                        <p class="col-2 text-white m-0 text-end mt-2" style="letter-spacing: 3px;">kategori :</p>
-                        <div class="col-3">
+                        <p class="col-6 m-0 pt-2 text-white" style="letter-spacing: 3px;">Menampilkan {{ bookFiltered.length }} dari {{ jumlahBuku }} buku</p>
+                        <!-- <p class="col-2 text-white m-0 text-end mt-2" style="letter-spacing: 3px;">kategori :</p> -->
+                        <div class="col-4   ">
                             <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select">
                                 <option value="" disabled selected>Kategori?</option>
                                 <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.nama">{{ kategori.nama }}</option>
@@ -49,6 +49,7 @@ const books = ref([])
 const kategories = ref([])
 const keyword = ref('')
 // const kategori = ref('')
+const jumlahBuku = ref(0)
 
 async function getBooks() {
     const {data, error} = await supabase.from('buku')
@@ -82,10 +83,18 @@ const bookFiltered = computed (() => {
     })
 }) 
 
+async function getJumlahBuku()
+{
+    const {data , count} = await supabase.from('buku')
+    .select('*', { count: "exact"})
+    if (data) jumlahBuku.value = count
+}
+
 
 onMounted(() => {
     getBooks()
     getKategori()
+    getJumlahBuku()
 })
 </script>
 
@@ -122,7 +131,7 @@ img {
 }
 
 .cb {
-    background-color: #fffeee83;
+    background-color: rgba(217, 217, 217, 0.80);
     border: 0;
     height: 250px;
     width: 180px;
