@@ -4,8 +4,8 @@
       <img class="img-fluid" src="@/assets/img/LOGO-SMK4.png" alt="logo smkn4">
     </div>
     <div class="col-md-10 col-9" style="color: white;">
-      <h1 class="judul ms-4">Perpus Digital</h1>
-      <p class="alamat ms-4">SMK Negeri 4 Tasikmalaya</p>
+      <h1 class="judul ">Perpus Digital</h1>
+      <p class="alamat">SMK Negeri 4 Tasikmalaya</p>
     </div>
   </div>
 </template>

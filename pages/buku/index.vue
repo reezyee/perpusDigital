@@ -20,19 +20,19 @@
                         <p class="col-6 m-0 pt-2 text-white" style="letter-spacing: 3px;">Menampilkan {{ bookFiltered.length }} dari {{ jumlahBuku }} buku</p>
                         <!-- <p class="col-2 text-white m-0 text-end mt-2" style="letter-spacing: 3px;">kategori :</p> -->
                         <div class="col-4   ">
-                            <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select">
-                                <option value="" disabled selected>Kategori?</option>
+                            <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select" @change="getBooks">
+                                <option value="" selected disabled>Kategori?</option>
                                 <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.nama">{{ kategori.nama }}</option>
                             </select>
                         </div>
                     </div>
                 </form>
-            <div class="row">
+                <div class="row">
                 <div v-for="(book, i) in bookFiltered" :key="i" class="col">
-                    <div class="col-lg-11 col-1 card cb">
+                    <div class="card cb col-lg-2 col-md-4 col-sm-4 col-6">
                         <div class="card-body">
                             <NuxtLink :to="`/buku/${book.id}`" style="text-decoration:none">
-                                <img :src="book.cover" class="cover border" alt="cover">
+                                <img :src="book.cover" class="cover border" :alt="book.judul">
                             </NuxtLink>
                         </div>
                     </div>
@@ -48,13 +48,15 @@ const supabase = useSupabaseClient()
 const books = ref([])
 const kategories = ref([])
 const keyword = ref('')
-// const kategori = ref('')
+// const kategori = ref(null)
 const jumlahBuku = ref(0)
 
 async function getBooks() {
     const {data, error} = await supabase.from('buku')
     .select(`*, kategori(*)`)
     .ilike('judul', `%${keyword.value}%`)
+    // if (kategori.value) query = query.eq('kategori', kategori.value)
+    // const {data , error} = await query
     .order('id')
     if (error) throw error
     if (data) {

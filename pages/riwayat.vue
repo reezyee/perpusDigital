@@ -37,26 +37,27 @@
                 </form>
             </div>
             <div class="row text-white">
-                <div class="table table-head table-responsive">
-                    <table class="table text-center">
-                        <thead>
-                            <tr>
-                                <th style="width: 0px;">No</th>
-                                <th style="width: 10px;">Tanggal</th>
-                                <th style="width: 100px; padding-right: 20px">Jam</th>
-                                <th style="width: 80px;">Nama</th>
-                                <th style="width: 10px;">Kategori</th>
-                                <th style="width: 10px;">Kelas</th>
-                                <th style="width: 150px;">Keperluan</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+                <!-- <table class="table"> -->
+                    <div class="table table-head table-responsive">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">No</th>
+                                    <th style="width: 120px;">Tanggal</th>
+                                    <th style="width: 120px;">Jam</th>
+                                    <th style="width: 150px;">Nama</th>
+                                    <th style="width: 90px;">Kategori</th>
+                                    <th style="width: 140px;">Kelas</th>
+                                    <th style="width: 260px;">Keperluan</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                     <div class="table-responsive table-body ">
                         <table class="table table-hover text-center">
                             <tbody>
                                 <tr v-for="(visitor, i) in visitorFiltered" :key="i">
-                                    <td style="width: 10px;">{{ i + 1 }}.</td>
+                                    <td style="width: 20px;">{{ i + 1 }}.</td>
                                     <td style="width: 50px;">{{ visitor.tanggal }}</td>
                                     <td style="width: 50px;">{{ visitor.waktu.split('.')[0] }}</td>
                                     <td style="width: 50px;">{{ visitor.nama }}</td>
@@ -66,7 +67,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                </div>
+                    </div>
+                <!-- </table> -->
             </div>
         </div>
     </div>
@@ -84,7 +86,7 @@ async function getVisitors() {
     const { data, error } = await supabase.from('pengunjung')
         .select(`*, keanggotaan(*), keperluan(*)`)
         .ilike('nama', `%${keyword.value}%`)
-        .order('tanggal', { ascending: false })
+        .order('id', { ascending: false })
     if (data) visitors.value = data
 }
 
@@ -162,7 +164,7 @@ onMounted(() => {
 
 .table-head {
     background-color: #305075;
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
     padding: 0;
 }
@@ -170,11 +172,15 @@ onMounted(() => {
 .table-body {
     background-color: #7395BA;
     border: 1px solid;
-    max-height: 250px;
-    width: 100%;
+    max-height: 210px;
+    /* width: 100%; */
     padding: 0;
 }
 
+/* th{
+    border: 1px solid;
+
+} */
 td {
     padding: 5px 0px;
     border: 1px solid;
