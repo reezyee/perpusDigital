@@ -2,7 +2,7 @@
     <div class="wrapper">
     <div class="content"></div>
         <div class="container-fluid">
-            <div class="row" style="padding-top: 190px;">
+            <div class="row" style="padding-top: 140px;">
                 <div class="col-md-4 col-5" style="padding-left: 15%;">
                     <NuxtLink class="btn btn-lg rounded-5" to="/">
                         Isi Kunjungan
@@ -34,6 +34,7 @@
                             <NuxtLink :to="`/buku/${book.id}`" style="text-decoration:none">
                                 <img :src="book.cover" class="cover border" :alt="book.judul">
                             </NuxtLink>
+                            <!-- <p class="text" style="font-size: 12px;">{{ book.judul }}</p> -->
                         </div>
                     </div>
                 </div>
@@ -129,14 +130,14 @@ onMounted(() => {
 }
 
 img {
-    width: 150px;
+    width: 120px;
 }
 
 .cb {
     background-color: rgba(217, 217, 217, 0.80);
     border: 0;
-    height: 250px;
-    width: 180px;
+    height: 206px;
+    width: 152px;
     margin: 5px 5px;
 }
 </style>

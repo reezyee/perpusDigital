@@ -2,7 +2,7 @@
     <div class="wrapper">
     <div class="content"></div>
         <div class="container-fluid">
-            <div class="row" style="padding: 190px 0;">
+            <div class="row" style="padding: 170px 0;">
                 <div class="col-lg-4 col-12 d-flex flex-column align-items-center">
                     <img :src="buku?.cover" class="cover border" alt="cover" style="width: 250px;">
                     <div class="row ">

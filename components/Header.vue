@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-10 col-9" style="color: white;">
       <h1 class="judul ">Perpus Digital</h1>
-      <p class="alamat">SMK Negeri 4 Tasikmalaya</p>
+      <h6 class="alamat">SMK Negeri 4 Tasikmalaya</h6>
     </div>
   </div>
 </template>
@@ -25,12 +25,12 @@
 .judul {
   letter-spacing: 10px;
   font-family: "Jockey One";
-  font-size: 50px;
+  /* font-size: 50px; */
 }
 
 .alamat {
   font-family: "Jaldi"; 
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 img {
