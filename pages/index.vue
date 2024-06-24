@@ -27,7 +27,7 @@
                 </select>
               </div>
               <div class="col mb-3">
-                <select v-model="jurusan" class="form-control form-control-lg form-select rounded-4" id="jurusan" required>
+                <select v-model="jurusan" class="form-control form-control-lg form-select rounded-4" id="jurusan" required @change="selectJurusan">
                   <option value="" disabled selected>Jurusan</option>
                   <option value="PPLG">PPLG</option>
                   <option value="TBSM">TBSM</option>
@@ -104,13 +104,18 @@ async function getKeperluan(){
   if(data) objectives.value = data
 }
 
-
 function resetKelas(e){
     if(e.target.value != '2'){
         kelas.value= ''
         tingkat.value= ''
         jurusan.value= ''
     }
+}
+
+const selectJurusan = () => {
+  if (jurusan.value == 'TOI') {
+    kelas.value = ''
+  }
 }
 
 onMounted(() => {
