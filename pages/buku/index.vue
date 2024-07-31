@@ -19,7 +19,7 @@
                     <div class="row my-3 d-flex justify-content-center ps-0">
                         <p class="col-6 m-0 pt-2 text-white" style="letter-spacing: 3px;">Menampilkan {{ bookFiltered.length }} dari {{ jumlahBuku }} buku</p>
                         <!-- <p class="col-2 text-white m-0 text-end mt-2" style="letter-spacing: 3px;">kategori :</p> -->
-                        <div class="col-4   ">
+                        <div class="col-4">
                             <select v-model="keyword" name="kategori" id="kategori" class="form-control form-control-sm rounded-5 form-select" @change="getBooks">
                                 <option value="" selected disabled>Kategori?</option>
                                 <option v-for="(kategori, i) in kategories" :key="i" :value="kategori.nama">{{ kategori.nama }}</option>
@@ -81,7 +81,7 @@ const bookFiltered = computed (() => {
     return books.value.filter((b) => {
         return (
             b.judul?.toLowerCase().includes(keyword.value?.toLowerCase()) ||
-            b.kategori?.nama.toLowerCase().includes(keyword.value?.toLowerCase())
+            b.kategori_buku?.nama?.toLowerCase().includes(keyword.value?.toLowerCase())
         )
     })
 }) 
