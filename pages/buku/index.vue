@@ -81,7 +81,7 @@ const bookFiltered = computed (() => {
     return books.value.filter((b) => {
         return (
             b.judul?.toLowerCase().includes(keyword.value?.toLowerCase()) ||
-            b.kategori_buku?.nama?.toLowerCase().includes(keyword.value?.toLowerCase())
+            b.kategori_buku?.nama.toLowerCase().includes(keyword.value?.toLowerCase())
         )
     })
 }) 
